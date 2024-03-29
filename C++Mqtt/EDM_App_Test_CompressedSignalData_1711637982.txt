@@ -1,3 +1,0 @@
-Topic: EDM/App/Test/CompressedSignalData
-Payload Length: 5410
-Payload: ‹

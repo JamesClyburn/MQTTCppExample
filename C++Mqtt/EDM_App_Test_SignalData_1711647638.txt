@@ -1,3 +1,0 @@
-Topic: EDM/App/Test/SignalData
-Payload Length: 15328
-Payload: 
