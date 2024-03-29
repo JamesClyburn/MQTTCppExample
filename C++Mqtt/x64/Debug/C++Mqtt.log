@@ -1,32 +1,32 @@
 ﻿  C++Mqtt.cpp
-C:\Users\JamesClyburn\Desktop\C++Mqtt\Dependencies\gzip\include\decompress.hpp(46,9): warning C4068: unknown pragma 'GCC'
+C:\Users\JamesClyburn\git\MQTTCppExample\Dependencies\gzip\include\decompress.hpp(46,9): warning C4068: unknown pragma 'GCC'
   (compiling source file 'C++Mqtt.cpp')
   
-C:\Users\JamesClyburn\Desktop\C++Mqtt\Dependencies\gzip\include\decompress.hpp(47,9): warning C4068: unknown pragma 'GCC'
+C:\Users\JamesClyburn\git\MQTTCppExample\Dependencies\gzip\include\decompress.hpp(47,9): warning C4068: unknown pragma 'GCC'
   (compiling source file 'C++Mqtt.cpp')
   
-C:\Users\JamesClyburn\Desktop\C++Mqtt\Dependencies\gzip\include\decompress.hpp(52,9): warning C4068: unknown pragma 'GCC'
+C:\Users\JamesClyburn\git\MQTTCppExample\Dependencies\gzip\include\decompress.hpp(52,9): warning C4068: unknown pragma 'GCC'
   (compiling source file 'C++Mqtt.cpp')
   
-C:\Users\JamesClyburn\Desktop\C++Mqtt\C++Mqtt\VCSMqttClient.cpp(10,1): warning C4005: 'HV_EXPORT': macro redefinition
+C:\Users\JamesClyburn\git\MQTTCppExample\C++Mqtt\VCSMqttClient.cpp(10,1): warning C4005: 'HV_EXPORT': macro redefinition
   (compiling source file 'C++Mqtt.cpp')
   C:\Users\JamesClyburn\git\libhv\build\include\hv\hexport.h(6,1):
   see previous definition of 'HV_EXPORT'
   
   VCSMqttClient.cpp
-C:\Users\JamesClyburn\Desktop\C++Mqtt\Dependencies\gzip\include\decompress.hpp(46,9): warning C4068: unknown pragma 'GCC'
+C:\Users\JamesClyburn\git\MQTTCppExample\Dependencies\gzip\include\decompress.hpp(46,9): warning C4068: unknown pragma 'GCC'
   (compiling source file 'VCSMqttClient.cpp')
   
-C:\Users\JamesClyburn\Desktop\C++Mqtt\Dependencies\gzip\include\decompress.hpp(47,9): warning C4068: unknown pragma 'GCC'
+C:\Users\JamesClyburn\git\MQTTCppExample\Dependencies\gzip\include\decompress.hpp(47,9): warning C4068: unknown pragma 'GCC'
   (compiling source file 'VCSMqttClient.cpp')
   
-C:\Users\JamesClyburn\Desktop\C++Mqtt\Dependencies\gzip\include\decompress.hpp(52,9): warning C4068: unknown pragma 'GCC'
+C:\Users\JamesClyburn\git\MQTTCppExample\Dependencies\gzip\include\decompress.hpp(52,9): warning C4068: unknown pragma 'GCC'
   (compiling source file 'VCSMqttClient.cpp')
   
-C:\Users\JamesClyburn\Desktop\C++Mqtt\C++Mqtt\VCSMqttClient.cpp(10,1): warning C4005: 'HV_EXPORT': macro redefinition
+C:\Users\JamesClyburn\git\MQTTCppExample\C++Mqtt\VCSMqttClient.cpp(10,1): warning C4005: 'HV_EXPORT': macro redefinition
   C:\Users\JamesClyburn\git\libhv\build\include\hv\hexport.h(6,1):
   see previous definition of 'HV_EXPORT'
   
   Generating Code...
 LINK : warning LNK4098: defaultlib 'LIBCMT' conflicts with use of other libs; use /NODEFAULTLIB:library
-  C++Mqtt.vcxproj -> C:\Users\JamesClyburn\Desktop\C++Mqtt\x64\Debug\C++Mqtt.exe
+  C++Mqtt.vcxproj -> C:\Users\JamesClyburn\git\MQTTCppExample\x64\Debug\C++Mqtt.exe

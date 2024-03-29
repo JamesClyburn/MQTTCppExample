@@ -51,6 +51,7 @@ int main() {
         if (input == "exit") {
             break;
         } else if (input == "run") {
+            // The commands that you can publish are in the AppTopics.h folder
             cli.publish(TOPIC_VCS_TEST_COMMAND, "Run");
         }
         else if (input == "stop") {

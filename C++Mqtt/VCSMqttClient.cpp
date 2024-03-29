@@ -1,6 +1,6 @@
-#include <hv/mqtt_client.h>
-#include <hv/mqtt_protocol.h>
-#include <hv/hexport.h>
+#include "hv/mqtt_client.h"
+#include "hv/mqtt_protocol.h"
+#include "hv/hexport.h"
 #include <iostream>
 #include <fstream>
 #include <algorithm>
@@ -67,16 +67,13 @@ private:
             std::string fileName = topicWithUnderscore + "_" + std::to_string(now) + ".txt";
             std::ofstream outfile;
 
-            std::string data = "";
-
             if (topic == topicPrefix + TOPIC_APP_TEST_COMPRESSED_SIGNALDATA) {
-                data = gzip::decompress(msg->payload, msg->payload_len);
+                payload  = gzip::decompress(msg->payload, msg->payload_len);
             }
-
-            payload = data;
 
             outfile.open(fileName);
             if (outfile.is_open()) {
+                this->log << "Created file for topic: " << topic << std::endl;
                 outfile << "Topic: " << topic << std::endl;
                 outfile << "Payload Length: " << msg->payload_len << std::endl;
                 outfile << "Payload: " << payload << std::endl;
@@ -87,7 +84,7 @@ private:
         };
 
         client.onClose = [](hv::MqttClient* cli) {
-            std::cout << "disconnected!" << std::endl;
+
         };
 	}
 };
