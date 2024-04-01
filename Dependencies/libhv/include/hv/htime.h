@@ -23,7 +23,7 @@ typedef struct datetime_s {
     int ms;
 } datetime_t;
 
-#ifdef _MSC_VER
+#if defined(_MSC_VER)
 /* @see winsock2.h
 // Structure used in select() call, taken from the BSD file sys/time.h
 struct timeval {
