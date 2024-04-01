@@ -1,4 +1,4 @@
-#include "VCSMqttClient.cpp"
+#include "EDMMQTTClient.cpp"
 #include <iostream>
 #include <thread>
 #include <string>
@@ -7,7 +7,7 @@
 
 using namespace std;
 
-void StartThread(VCSMqttClient *client) {
+void StartThread(EDMMQTTClient *client) {
     client->run();
 }
 
@@ -22,13 +22,22 @@ int main() {
 
     string host;
     int port;
+    string username;
+    string password;
+    string topicPrefix;
 
     cout << "Please enter host: ";
     cin >> host;
     cout << "Please enter port: ";
     cin >> port;
+    cout << "Please enter username: ";
+    cin >> username;
+    cout << "Please enter password: ";
+    cin >> password;
+    cout << "Please enter topic prefix: ";
+    cin >> topicPrefix;
 
-    VCSMqttClient cli(host, "C++ MQTT Demo", port, true, "Admin", "123456");
+    EDMMQTTClient cli(host, port, "C++ MQTT Demo", topicPrefix, username, password);
     cli.connect();
     thread t1(StartThread, &cli);
 

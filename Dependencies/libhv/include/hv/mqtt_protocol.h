@@ -1,7 +1,7 @@
 #ifndef HV_MQTT_PROTOCOL_H_
 #define HV_MQTT_PROTOCOL_H_
 
-#include "hv/hexport.h"
+#include "hexport.h"
 
 #define DEFAULT_MQTT_PORT   1883
 

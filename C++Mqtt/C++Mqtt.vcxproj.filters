@@ -18,7 +18,7 @@
     <ClCompile Include="C++Mqtt.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="VCSMqttClient.cpp">
+    <ClCompile Include="EDMMQTTClient.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
   </ItemGroup>

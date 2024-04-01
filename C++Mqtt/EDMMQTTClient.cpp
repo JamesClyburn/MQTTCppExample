@@ -1,6 +1,6 @@
-#include "hv/mqtt_client.h"
-#include "hv/mqtt_protocol.h"
-#include "hv/hexport.h"
+#include "mqtt_client.h"
+#include "mqtt_protocol.h"
+#include "hexport.h"
 #include <iostream>
 #include <fstream>
 #include <algorithm>
@@ -9,22 +9,22 @@
 
 #define HV_EXPORT  __declspec(dllimport)
 
-class VCSMqttClient
+class EDMMQTTClient
 {
 public:
 	hv::MqttClient client;
 
-    VCSMqttClient(std::string host, std::string id, int port = 1883, bool auth = true, std::string username="Admin", std::string password="123456") {
+    EDMMQTTClient(std::string host, int port, std::string id, std::string topicPrefix, std::string username, std::string password) {
 		this->client.setID(id.c_str());
         this->host = host;
         this->port = port;
-        this->topicPrefix = "EDM/";
+        this->username = username;
+        this->password = password;
+        this->topicPrefix = topicPrefix;
 
         log.open("log.txt");
 
-		if (auth) {
-			this->client.setAuth(username.c_str(), password.c_str());
-		}
+		this->client.setAuth(username.c_str(), password.c_str());
         initClientAsyncMethods();
 	}
 
@@ -51,6 +51,8 @@ private:
     int port;
     std::string topicPrefix;
     std::ofstream log;
+    std::string username;
+    std::string password;
 	void initClientAsyncMethods() {
         client.onConnect = [](hv::MqttClient* cli) {
 

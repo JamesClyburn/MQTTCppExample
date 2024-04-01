@@ -2,9 +2,9 @@
 #define HV_MQTT_CLIENT_H_
 
 #include "mqtt_protocol.h"
-#include "hv/hloop.h"
-#include "hv/hssl.h"
-#include "hv/hmutex.h"
+#include "hloop.h"
+#include "hssl.h"
+#include "hmutex.h"
 
 #define DEFAULT_MQTT_KEEPALIVE  60 // s
 

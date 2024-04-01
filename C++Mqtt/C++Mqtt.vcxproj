@@ -112,7 +112,7 @@
       <SDLCheck>true</SDLCheck>
       <PreprocessorDefinitions>HV_STATICLIB</PreprocessorDefinitions>
       <ConformanceMode>true</ConformanceMode>
-      <AdditionalIncludeDirectories>$(SolutionDir)Dependencies\lihbv\include\hv;$(SolutionDir)Dependencies\gzip\include;$(SolutionDir)Dependencies\zlib\include</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>$(SolutionDir)Dependencies\libhv\include\hv;$(SolutionDir)Dependencies\gzip\include;$(SolutionDir)Dependencies\zlib\include</AdditionalIncludeDirectories>
     </ClCompile>
     <Link>
       <SubSystem>Console</SubSystem>
@@ -129,7 +129,7 @@
       <SDLCheck>true</SDLCheck>
       <PreprocessorDefinitions>HV_STATICLIB</PreprocessorDefinitions>
       <ConformanceMode>true</ConformanceMode>
-      <AdditionalIncludeDirectories>$(SolutionDir)Dependencies\lihbv\include\hv;$(SolutionDir)Dependencies\gzip\include;$(SolutionDir)Dependencies\zlib\include</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>$(SolutionDir)Dependencies\libhv\include\hv;$(SolutionDir)Dependencies\gzip\include;$(SolutionDir)Dependencies\zlib\include</AdditionalIncludeDirectories>
     </ClCompile>
     <Link>
       <SubSystem>Console</SubSystem>
@@ -142,7 +142,7 @@
   </ItemDefinitionGroup>
   <ItemGroup>
     <ClCompile Include="C++Mqtt.cpp" />
-    <ClCompile Include="VCSMqttClient.cpp" />
+    <ClCompile Include="EDMMQTTClient.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="AppTopics.h" />
