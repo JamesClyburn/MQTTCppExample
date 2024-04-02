@@ -1,3 +1,0 @@
-Topic: TEST/GlobalParameter/Response
-Payload Length: 535
-Payload: {"Item1":"Test.Run.Parameter.ShakerName","Item2":{"Type":"ShakerName","Name":{"Index":null,"Value":{"Languages":[{"Key":"en-US","Value":"Shaker name"},{"Key":"zh-CN","Value":"振动台型号"},{"Key":"zh-TW","Value":"振動機型號"}]}},"Group":{"Index":null,"Value":{"Languages":[{"Key":"en-US","Value":"Shaker parameters"},{"Key":"zh-CN","Value":"振动台参数"},{"Key":"zh-TW","Value":"振動機參數"}]}},"Value":"Default shaker","Unit":null,"Table":null,"Tree":null,"TestId":null,"RunId":null,"TestName":null,"Attributes":[]}}
