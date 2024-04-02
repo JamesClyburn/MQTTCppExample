@@ -17,3 +17,6 @@ This project uses the libhv mqtt library to connect to EDM, and perform actions 
 3. Change directories to the C++Mqtt folder.
 4. Run the make command.
 5. Run the executable.
+
+## Command List:
+
