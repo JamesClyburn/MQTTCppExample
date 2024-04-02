@@ -3,6 +3,7 @@
 #include "hexport.h"
 #include <iostream>
 #include <fstream>
+#include <filesystem>
 #include <algorithm>
 #include "decompress.hpp"
 #include "AppTopics.h"
@@ -33,12 +34,12 @@ public:
     }
 
     void subscribe(std::string topic) {
-        std::string topicAndPrefix = topicPrefix + topic;
+        std::string topicAndPrefix = topicPrefix + "/" + topic;
         this->client.subscribe(topicAndPrefix.c_str());
     }
 
     void publish(std::string topic, std::string payload) {
-        std::string topicAndPrefix(topicPrefix + topic);
+        std::string topicAndPrefix(topicPrefix + "/" + topic);
         this->client.publish(topicAndPrefix, payload);
     }
 
@@ -67,13 +68,13 @@ private:
             std::string payload(msg->payload);
             std::time_t now = std::time(NULL);
             std::string fileName = topicWithUnderscore + "_" + std::to_string(now) + ".txt";
-            std::ofstream outfile;
-
-            if (topic == topicPrefix + TOPIC_APP_TEST_COMPRESSED_SIGNALDATA) {
+            if (topic == topicPrefix + "/" + TOPIC_APP_TEST_COMPRESSED_SIGNALDATA) {
                 payload  = gzip::decompress(msg->payload, msg->payload_len);
             }
+            
+            std::ofstream outfile;
+            outfile.open("data/" + fileName);
 
-            outfile.open(fileName);
             if (outfile.is_open()) {
                 this->log << "Created file for topic: " << topic << std::endl;
                 outfile << "Topic: " << topic << std::endl;
@@ -81,7 +82,7 @@ private:
                 outfile << "Payload: " << payload << std::endl;
                 outfile.close();
             } else {
-                this->log << "Unable to create file" << fileName << std::endl;
+                this->log << "Unable to create file: " << fileName << std::endl;
             }
         };
 
